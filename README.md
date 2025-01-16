@@ -62,4 +62,4 @@ lilypad run github.com/rhochmayr/ollama-llama3.2-3b:0.1.6 -i Prompt="A lengthy c
 ## Dependencies and Credits
 
 - [Ollama](https://ollama.com/)
-- [lama3.2](https://ollama.com/library/llama3.2)
+- [llama3.2](https://ollama.com/library/llama3.2)
