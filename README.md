@@ -31,14 +31,14 @@ This README provides instructions for building and running the Ollama Llama3.2:3
 To run on the local development network:
 
 ```
-go run . run --network dev github.com/rhochmayr/ollama-llama3.2-3b:0.1.0 --web3-private-key <admin_key> -i prompt="your prompt here"
+go run . run --network dev github.com/rhochmayr/ollama-llama3.2-3b:0.1.0 --web3-private-key <admin_key> -i Prompt="your prompt here"
 ```
 
 Replace `<admin_key>` with the admin key found in `hardhat/utils/accounts.ts`.
 
 Example:
 ```
-go run . run --network dev github.com/rhochmayr/ollama-llama3.2-3b:0.1.0 --web3-private-key <admin_key> -i prompt="A lengthy conversation between two physicists about the latest discovery in quantum technology"
+go run . run --network dev github.com/rhochmayr/ollama-llama3.2-3b:0.1.0 --web3-private-key <admin_key> -i Prompt="A lengthy conversation between two physicists about the latest discovery in quantum technology"
 ```
 
 ### Using Lilypad Main Network
@@ -46,15 +46,20 @@ go run . run --network dev github.com/rhochmayr/ollama-llama3.2-3b:0.1.0 --web3-
 To run on the main Lilypad network:
 
 ```
-lilypad run github.com/rhochmayr/ollama-llama3.2-3b:0.1.0 -i prompt="your prompt here"
+lilypad run github.com/rhochmayr/ollama-llama3.2-3b:0.1.0 -i Prompt="your prompt here"
 ```
 
 Example:
 ```
-lilypad run github.com/rhochmayr/ollama-llama3.2-3b:0.1.0 -i prompt="A lengthy conversation between two physicists about the latest discovery in quantum technology"
+lilypad run github.com/rhochmayr/ollama-llama3.2-3b:0.1.0 -i Prompt="A lengthy conversation between two physicists about the latest discovery in quantum technology"
 ```
 
 ## Notes
 
 - Ensure you have the necessary permissions and resources to run Docker containers with GPU support.
 - The module version (`0.1.0`) may be updated. Check for the latest version before running.
+
+## Dependencies and Credits
+
+- [Ollama](https://ollama.com/)
+- [lama3.2](https://ollama.com/library/llama3.2)
