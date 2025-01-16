@@ -15,7 +15,7 @@
             "/run_ollama.sh", 
             {{ if .Prompt }} {{ .Prompt }} {{else}}"A 20 line heiku about Lilypad, a decentralized GPU network"{{ end }}
         ],
-        "Image": "ghcr.io/rhochmayr/ollama-llama3.2-3b:latest"
+        "Image": "docker pull ghcr.io/rhochmayr/ollama-llama3.2-3b:latest@sha256:12a6caa12b87a1365232ae355bbbfc964528b1ce5795cb8db134fe3c3a01f3e9"
       },
       "Engine": "Docker",
       "Network": {
