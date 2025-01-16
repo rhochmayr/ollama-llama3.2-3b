@@ -1,0 +1,36 @@
+{
+  "machine": {
+    "gpu": 1,
+    "cpu": 8000,
+    "ram": 8000
+  },
+  "job": {
+    "APIVersion": "V1beta1",
+    "Spec": {
+      "Deal": {
+        "Concurrency": 1
+      },
+      "Docker": {
+        "Entrypoint": [
+            "/run_ollama.sh", 
+            {{ if .Prompt }} {{ .Prompt }} {{else}}"A 20 line heiku about Lilypad, a decentralized GPU network"{{ end }}
+        ],
+        "Image": "ghcr.io/rhochmayr/ollama-llama3.2-3b:latest"
+      },
+      "Engine": "Docker",
+      "Network": {
+        "Type": "None"
+      },
+      "PublisherSpec": {
+        "Type": "IPFS"
+      },
+      "Resources": {
+        "GPU": "1",
+        "cpu": "8",
+        "memory": "8Gb"
+      },
+      "Timeout": 1800,
+      "Verifier": "Noop"
+    }
+  }
+}

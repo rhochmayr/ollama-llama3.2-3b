@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-
+    paths:
+      - 'Dockerfile'
+      - 'run_ollama.sh'
+      
 jobs:
   build:
     runs-on: ubuntu-latest
