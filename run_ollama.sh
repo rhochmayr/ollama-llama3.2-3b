@@ -1,18 +1,17 @@
 #!/bin/bash
 
-# Start the ollama server, sending any output to stderr.
-nohup bash -c "ollama serve &" >&2
-
-# Wait for the server to start; send status messages to stderr.
+# Start ollama server
+nohup bash -c "ollama serve &"
 until curl -s http://127.0.0.1:11434 > /dev/null; do
-    echo "Waiting for ollama to start..." >&2
+    echo "Waiting for ollama to start..."
     sleep 1
 done
 
-# Generate the response (this output goes to stdout by default).
+# Pass input string to ollama run command and generate response
 response=$(ollama run llama3.2:3b "$1")
 
-# Print only the desired response to stdout.
+# Output the response
 echo "Ollama Response: $response"
 
+# Exit the container after generating the response
 exit 0
