@@ -14,7 +14,7 @@ This README provides instructions for building and running the Ollama Llama3.2:3
 
 2. Build the Docker image:
    ```
-   docker build -t ollama-llama3.2-3b
+   docker build -t ollama-llama3.2-3b .
    ```
 
 3. Run the container:
